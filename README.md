@@ -6,7 +6,7 @@ go-cwlogs is a simple client for putting log events to CloudWatch Logs from appl
 ## Install
 
 ```bash
-go get michimani/go-cwlogs
+go get github.com/michimani/gcwlogs
 ```
 
 ## Example
@@ -20,11 +20,11 @@ import (
 
 	"github.com/aws/aws-sdk-go/service/cloudwatchlogs"
 
-	gocwlogs "github.com/michimani/go-cwlogs"
+	"github.com/michimani/gcwlogs"
 )
 
 func main() {
-	cwl := gocwlogs.New("ap-northeast-1")
+	cwl := gcwlogs.New("ap-northeast-1")
 
 	var groupName string = "smaple/log/group"
 	var streamName string = "sample/log/stream"
