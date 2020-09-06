@@ -14,7 +14,9 @@ type CWLogs struct {
 // New is a construct function.
 func New(region string) *CWLogs {
 	cwlogs := &CWLogs{
-		client: cloudwatchlogs.New(session.Must(session.NewSession()), aws.NewConfig().WithRegion(region)),
+		client: cloudwatchlogs.New(
+			session.Must(session.NewSession()),
+			aws.NewConfig().WithRegion(region)),
 	}
 
 	return cwlogs

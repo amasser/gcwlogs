@@ -47,6 +47,7 @@ func (t CWLogs) GetNextSequenceToken(groupName string, streamName string) *strin
 		if *logStream.LogStreamName == streamName {
 			if logStream.UploadSequenceToken != nil {
 				nextSeqToken = *logStream.UploadSequenceToken
+				break
 			}
 		}
 	}
